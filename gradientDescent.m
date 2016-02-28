@@ -20,10 +20,9 @@ for iter = 1:num_iters
      % theta_zero = theta_zero - alpha / m * sum();
      % theta_one = theta_one - alpha / m * sum(((theta_zero + X * theta_one)-y)*X);
 
-      h = X * theta; % hypothesis
-       % X' * (h - y) = sum((h - y) .* X)'
-      theta -= alpha * (1 / m) * (X * (h - y));
-
+     h = X * theta; % hypothesis
+      % X' * (h - y) = sum((h - y) .* X)'
+      theta -= alpha * (1 / m) * (X' * (h - y));
 
 
     % ============================================================
